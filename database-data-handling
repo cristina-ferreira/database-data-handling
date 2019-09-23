@@ -1,0 +1,35 @@
+INSERT INTO school (name, country, capacity)
+	VALUES ('Beauxbaton Academy of Magic', 'France', 550),
+	('Castelobruxo', 'Brasil', 380),
+	('Durmstrang Institute', 'Norway', 570),
+	('Hogwarts School of Witchcraft and Wizadry', 'United Kingdom', 450),
+	('Ilvermorny School of Witchcraft and Wizardry', 'USA', 300),
+	('Koldovstoretz', 'Russia', 125),
+	('Mahoutokoro School of Magic', 'Uganda', 350),
+	('Uagadou School of Magic', 'Uganda', 350);
+
+UPDATE school
+	SET country = 'Sweden'
+	WHERE name = 'Durmstrang Institute';
+
+
+UPDATE school
+	SET capacity = 700
+	WHERE name = 'Mahoutokoro School of Magic';
+
+
+DELETE from school WHERE name LIKE '%Magic%';
+SELECT * FROM school;
+
++----+----------------------------------------------+----------+----------------+
+| id | name                                         | capacity | country        |
++----+----------------------------------------------+----------+----------------+
+|  2 | Castelobruxo                                 |      380 | Brasil         |
+|  3 | Durmstrang Institute                         |      570 | Sweden         |
+|  4 | Hogwarts School of Witchcraft and Wizadry    |      450 | United Kingdom |
+|  5 | Ilvermorny School of Witchcraft and Wizardry |      300 | USA            |
+|  6 | Koldovstoretz                                |      125 | Russia         |
++----+----------------------------------------------+----------+----------------+
+5 rows in set (0.00 sec)
+
+
